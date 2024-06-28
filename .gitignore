@@ -4,7 +4,6 @@
 #####################################################
 *.sketch
 *.fig
-
 # Avoid README-template.md file
 README-template.md
 # Avoid accidental XD upload if you convert the design file
