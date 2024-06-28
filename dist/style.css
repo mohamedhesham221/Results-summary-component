@@ -5,7 +5,7 @@
   --cobaltBlue: hsl(234, 85%, 45%);
   --lightSlateBlue: hsl(252, 100%, 67%);
   --lightRoyalBlue: hsl(241, 81%, 54%);
-  --violetBlue: hsla(256, 72%, 46%, 1);
+  --violetBlue: hsl(256, 72%, 46%);
   --persianBlue: hsla(241, 72%, 46%, 0);
   --white: hsl(0, 0%, 100%);
   --paleBlue: hsl(221, 100%, 96%);
@@ -24,3 +24,45 @@
   box-sizing: border-box;
   font-family: "Hanken Grotesk";
 }
+.results-summary-card {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.results {
+  width: 100%;
+  height: max-content;
+  background: linear-gradient(180deg, var(--lightRoyalBlue) 70%, var(--cobaltBlue) 100%);
+  border-radius: 0 0 2rem 2rem;
+  text-align: center;
+  padding: 25px;
+}
+.results h2 {
+  color: var(--lightLavender);
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.results-score {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: auto;
+  background: linear-gradient(180deg, var(--cobaltBlue) 40%, var(--lightRoyalBlue) 100%);
+  padding-top: 20px;
+}
+.your-score, .great {
+  color: var(--white);
+  font-size: 3rem;
+}
+.final-score {
+  color: var(--lightLavender);
+  opacity: .5;
+}
+  .great {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .score-details {
+    color: var(--lightLavender);
+    font-size: 1rem;
+  }
