@@ -51,7 +51,7 @@
     }
     function displayData(data) {
       console.log(data)
-      data.map((dd) => {
+      data.forEach((dd) => {
         document.querySelector("#summary-scores").innerHTML = `
         <div class="${dd.category.toLowerCase()}">
           <p>
