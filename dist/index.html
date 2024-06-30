@@ -40,6 +40,7 @@
   </footer>
 
   <script>
+     // Function to fetch JSON data
     async function getData() {
       try {
         const response = await fetch("data.json")
@@ -49,6 +50,7 @@
         console.log(error);
       }
     }
+    // Function to display the fetched data
     function displayData(data) {
       let totalScores = data.length * 100;
       let yourTotalScores = 0;
@@ -68,6 +70,7 @@
       document.querySelector(".your-final-score").textContent = yourScoreInPrecentage;
       return data
     }
+     // Fetch data when the page loads
     window.onload = getData
   </script>
 </body>
