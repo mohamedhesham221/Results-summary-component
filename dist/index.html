@@ -50,7 +50,9 @@
       }
     }
     function displayData(data) {
-      console.log(data)
+      let totalScores = data.length * 100;
+      let yourTotalScores = 0;
+      let yourScoreInPrecentage = 0;
       data.forEach((dd) => {
         document.querySelector("#summary-scores").innerHTML += `
         <div class="${dd.category.toLowerCase()}">
@@ -60,7 +62,10 @@
           </p>
           <p><span class="your-score">${dd.score}</span> / 100</p>
         </div>`
+        yourTotalScores += dd.score
       })
+      yourScoreInPrecentage = Math.floor(yourTotalScores / totalScores * 100)
+      document.querySelector(".your-final-score").textContent = yourScoreInPrecentage;
       return data
     }
     window.onload = getData
