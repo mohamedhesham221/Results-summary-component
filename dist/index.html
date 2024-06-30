@@ -52,7 +52,7 @@
     function displayData(data) {
       console.log(data)
       data.forEach((dd) => {
-        document.querySelector("#summary-scores").innerHTML = `
+        document.querySelector("#summary-scores").innerHTML += `
         <div class="${dd.category.toLowerCase()}">
           <p>
             <img src="${dd.icon}" alt="${dd.category + " 's icon"}"> 
@@ -61,7 +61,7 @@
           <p><span class="your-score">${dd.score}</span> / 100</p>
         </div>`
       })
-      // return data
+      return data
     }
     window.onload = getData
   </script>
