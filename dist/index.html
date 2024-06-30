@@ -26,31 +26,9 @@
     </section>
     <section class="summary">
       <h2>Summary</h2>
-      <div class="reaction">
-        <p>
-          <img src="./assets/images/icon-reaction.svg"> Reaction
-        </p>
-        <p><span class="your-score">80</span> / 100</p>
+      <div id="summary-scores">
       </div>
-      <div class="memory">
-        <p>
-          <img src="./assets/images/icon-memory.svg"> Memory
-        </p>
-        <p> <span class="your-score">92</span> / 100</p>
-      </div>
-      <div class="verbal">
-        <p>
-          <img src="./assets/images/icon-verbal.svg"> Verbal
-        </p>
-        <p><span class="your-score">61</span> / 100 </p>
-      </div>
-      <div class="visual">
-        <p>
-          <img src="./assets/images/icon-visual.svg"> Visual
-        </p>
-        <p><span class="your-score">72</span> / 100 </p>
-      </div>
-      <button type="button">Continue</button>
+      <button type=" button">Continue</button>
 
     </section>
   </div>
@@ -73,6 +51,16 @@
     }
     function displayData(data) {
       console.log(data)
+      data.map((dd) => {
+        document.querySelector("#summary-scores").innerHTML = `
+        <div class="${dd.category.toLowerCase()}">
+          <p>
+            <img src="${dd.icon} alt="${dd.icon + " 's icon"}"> 
+            <span>${dd.category}</span> 
+          </p>
+          <p><span class="your-score">${dd.score}</span> / 100</p>
+        </div>`
+      })
       return data
     }
     window.onload = getData
