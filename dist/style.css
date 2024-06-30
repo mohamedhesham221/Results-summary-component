@@ -233,10 +233,6 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1024px) {}
-
-@media only screen and (min-width: 1200px) {}
-
 @media only screen and (min-width: 1440px) {
   .results-summary-card {
     width: 850px;
